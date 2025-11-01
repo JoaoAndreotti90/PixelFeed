@@ -1,0 +1,92 @@
+.like {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.75rem 0;
+  justify-content: flex-start;
+}
+
+.like button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like svg {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin: 0;
+}
+
+.like svg:hover {
+  color: var(--color-primary-light);
+  transform: scale(1.15);
+}
+
+.like svg:active {
+  transform: scale(0.95);
+}
+
+.like svg.liked {
+  color: #ff6b6b;
+  animation: likeAnimation 0.4s ease-in-out;
+}
+
+@keyframes likeAnimation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like .like-count {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .like {
+    padding: 0.6rem 0;
+    gap: 0.6rem;
+  }
+
+  .like svg {
+    font-size: 1.4rem;
+  }
+
+  .like .like-count {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .like {
+    padding: 0.5rem 0;
+  }
+
+  .like svg {
+    font-size: 1.3rem;
+  }
+
+  .like .like-count {
+    font-size: 0.85rem;
+  }
+}

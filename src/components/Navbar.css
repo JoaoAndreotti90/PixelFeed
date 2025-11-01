@@ -1,0 +1,230 @@
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border);
+  box-sizing: border-box;
+  position: relative;
+}
+
+#nav .brand h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+#nav .brand a {
+  text-decoration: none;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--color-text-primary);
+  z-index: 150;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0 1.5rem;
+}
+
+#nav .search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+#nav .search-form svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#nav .search-form input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  padding-left: 3rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 5px;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+#nav .search-form input:focus {
+  border-color: var(--color-primary);
+}
+
+#nav .links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+#nav .links span {
+  display: none;
+}
+
+#nav .links a {
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: var(--transition-fast);
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 6px;
+}
+
+#nav .links a:hover {
+  color: var(--color-primary);
+}
+
+#nav .links button {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  transition: var(--transition-fast);
+  position: relative;
+  top: 6px;
+}
+
+#nav .links button:hover {
+  color: var(--color-primary);
+}
+
+#nav .links a:not([class]) {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  #nav {
+    padding: 1rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-center {
+    display: none;
+    margin: 0;
+  }
+
+  .nav-center.active {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-dark);
+    padding: 1.5rem 1rem;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+  .nav-center.active .search-form {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  .nav-center.active .links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav-center.active .links li {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 2rem;
+    box-sizing: border-box;
+  }
+
+  #nav .nav-center.active .links span {
+    display: inline;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .nav-center.active .links a {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+
+  .nav-center.active .links button {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #nav {
+    padding: 0.8rem;
+  }
+
+  #nav .brand h2 {
+    font-size: 1.3rem;
+  }
+
+  .hamburger-menu {
+    font-size: 1.8rem;
+  }
+
+  .nav-center.active {
+    top: 55px;
+    padding: 1.2rem 0.8rem;
+    gap: 1.2rem;
+  }
+
+  .nav-center.active .links {
+    gap: 1.2rem;
+  }
+
+  .nav-center.active .links li {
+    padding-right: 2rem;
+  }
+
+  #nav .nav-center.active .links span {
+    font-size: 0.95rem;
+  }
+}

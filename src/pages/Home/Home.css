@@ -1,0 +1,259 @@
+#home {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin: 2rem 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--color-border-light);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-state p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  font-weight: 500;
+}
+
+.no-photos {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin: 2rem 0;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.no-photos h2 {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.no-photos p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.no-photos a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.no-photos a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transition: var(--transition-smooth);
+}
+
+.no-photos a:hover::after {
+  width: 100%;
+}
+
+.no-photos a:hover {
+  color: var(--color-primary-light);
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.welcome-message {
+  background: var(--color-bg-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.welcome-message h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-text-primary);
+}
+
+.welcome-message p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.btn-retry {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+}
+
+.btn-retry:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  #home {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .loading-state {
+    padding: 3rem 1.5rem;
+  }
+
+  .spinner {
+    width: 45px;
+    height: 45px;
+  }
+
+  .loading-state p {
+    font-size: 1rem;
+  }
+
+  .no-photos {
+    padding: 3rem 1.5rem;
+  }
+
+  .no-photos h2 {
+    font-size: 1.7rem;
+  }
+
+  .no-photos p {
+    font-size: 1rem;
+  }
+
+  .photos-container {
+    gap: 1.5rem;
+  }
+
+  .welcome-message {
+    padding: 1.5rem;
+  }
+
+  .welcome-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-retry {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #home {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .loading-state {
+    padding: 2.5rem 1rem;
+  }
+
+  .spinner {
+    width: 40px;
+    height: 40px;
+  }
+
+  .loading-state p {
+    font-size: 0.95rem;
+  }
+
+  .no-photos {
+    padding: 2.5rem 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .no-photos h2 {
+    font-size: 1.5rem;
+  }
+
+  .no-photos p {
+    font-size: 0.95rem;
+  }
+
+  .photos-container {
+    gap: 1rem;
+  }
+
+  .welcome-message {
+    padding: 1.2rem;
+  }
+
+  .welcome-message h2 {
+    font-size: 1.3rem;
+  }
+
+  .welcome-message p {
+    font-size: 0.9rem;
+  }
+
+  .btn-retry {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

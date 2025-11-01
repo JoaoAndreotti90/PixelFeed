@@ -1,0 +1,120 @@
+.message {
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  animation: messageSlideIn 0.3s ease-out;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes messageSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: currentColor;
+}
+
+.message p {
+  margin: 0;
+  color: inherit;
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.message-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.message.error {
+  background-color: var(--color-error-bg);
+  border-color: var(--color-error-border);
+  color: var(--color-error-text);
+}
+
+.message.error::before {
+  background: var(--color-error-text);
+}
+
+.message.success {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success-border);
+  color: var(--color-success-text);
+}
+
+.message.success::before {
+  background: var(--color-success-text);
+}
+
+.message.info {
+  background-color: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.3);
+  color: var(--color-primary-light);
+}
+
+.message.info::before {
+  background: var(--color-primary);
+}
+
+.message.warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  border-color: rgba(255, 193, 7, 0.3);
+  color: #ffb74d;
+}
+
+.message.warning::before {
+  background: #ff9800;
+}
+
+@media (max-width: 768px) {
+  .message {
+    padding: 0.9rem 1.2rem;
+    gap: 0.7rem;
+  }
+
+  .message p {
+    font-size: 0.9rem;
+  }
+
+  .message-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .message {
+    padding: 0.8rem 1rem;
+    gap: 0.6rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .message p {
+    font-size: 0.85rem;
+  }
+
+  .message-icon {
+    font-size: 1.1rem;
+  }
+}
