@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 📸 PixelFeed - Rede Social
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <img src="./capa-pixelfeed.png" alt="Capa do PixelFeed" width="100%">
+  <br><br>
 
-## Available Scripts
+  <a href="https://pixel-feed-peach.vercel.app/login">
+    <img src="https://img.shields.io/badge/VER_DEMO_ONLINE-E1306C?style=for-the-badge&logo=vercel&logoColor=white" alt="Ver Demo">
+  </a>
+</div>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+## 📄 Sobre o Projeto
+O **PixelFeed** é uma interface de rede social desenvolvida para exercitar a criação de componentes reutilizáveis e a renderização de listas dinâmicas no React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O objetivo principal foi criar um layout fiel ao de grandes redes sociais, focando na interação do usuário (Likes, Comentários) e na estrutura de dados do Front-end.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Funcionalidades
+* ✅ **Feed de Postagens:** Renderização dinâmica de posts com fotos e textos.
+* ✅ **Interatividade:** Botões de "Curtir" e campo de comentários funcionais (Gerenciamento de Estado).
+* ✅ **Componentização:** Reaproveitamento da estrutura de Post, Header e Sidebar.
+* ✅ **Design Responsivo:** Adaptável para telas de desktop e mobile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<div align="left">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JS" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Como rodar o projeto
 
-### `npm run eject`
+```bash
+# Clone o repositório
+$ git clone [https://github.com/JoaoAndreotti90/PixelFeed.git](https://github.com/JoaoAndreotti90/PixelFeed.git)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Entre na pasta
+$ cd PixelFeed
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Instale as dependências
+$ npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Rode o projeto
+$ npm start
